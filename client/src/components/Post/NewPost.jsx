@@ -9,7 +9,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import CreateIcon from '@mui/icons-material/Create';
 import { Typography } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import { createPost } from '../api/api';
+import { createPost } from '../../api/api';
 
 const NewPostForm = () => {
     const [open, setOpen] = useState(false);
@@ -39,10 +39,10 @@ const NewPostForm = () => {
     }
 
     return (<>
-        <div align="center">
-            <Button variant="outlined" onClick={clickedOpen} >
+        <div align="right">
+            <Button variant="outlined" onClick={clickedOpen} sx={{ marginTop: "10%" }}>
                 <CreateIcon />
-                Yeni Post Ekle
+                Add New Post
             </Button>
         </div>
         <Dialog open={open} onClose={clickedClose} fullWidth={true} >

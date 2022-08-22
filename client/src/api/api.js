@@ -18,6 +18,8 @@ export const createPost = async (post) => {
 }
 
 export const updatePost = async (id, updatedPost) => {
+    console.log("gelen id: ", id);
+    console.log("gelen yenisi:", updatedPost)
     const { data } = await axios.patch(`${apiEndpoint + 'posts/'}${id}`, updatedPost);
     return data;
 }
